@@ -1,0 +1,17 @@
+{% import "bootstrap/wtf.html" as wtf %}
+
+extends base
+block main
+  table.table
+    tr
+      th Name
+      th Rules
+      th Status
+    tr
+    {% for element in table %}
+    tr
+      td {{element['name']}}
+      td {{element['rules']}}
+      td {{element['status']}}
+    tr
+    {% endfor %}

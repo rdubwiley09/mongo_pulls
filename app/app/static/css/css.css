@@ -1,0 +1,51 @@
+.flash{
+  background: white;
+  padding: 0.5em;
+  text-align: center;
+  font-weight: bold;
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+#submit {
+  margin-top: 10px;
+}
+
+#save_to_csv {
+  margin-right: 60px;
+  margin-left: 10px;
+}
+
+.chosen-container-multi .chosen-choices{
+  width: 1200px;
+}
+
+.chosen-container-multi .chosen-results {
+  width: 1200px;
+}
+
+.chosen-container-multi .chosen-drop {
+  width: 1200px;
+}
+.chosen-container .chosen-container-multi{
+  width: 1200px;
+}
+
+.chosen-search-input {
+  min-width: 1200px;
+}
+
+.chosen-container .chosen-single {
+  min-width: 1200px;
+}
+
+.chosen-container .chosen-drop {
+  min-width: 1200px;
+}
+
+.chosen-search-input {
+  min-width: 1195px;
+}

@@ -1,0 +1,36 @@
+{% import "bootstrap/wtf.html" as wtf %}
+
+extends base
+block main      
+  .row
+    .col-md-1
+    .col-md-10
+      h1(id="title") Build Your Audiences!
+      ul.flash
+        {% for message in get_flashed_messages() %}
+        li {{ message }}
+        {% endfor %} 
+      form(method="POST", role="form")
+        {{ form.hidden_tag() }}
+        {{wtf.form_field(form.market)}}
+        {{wtf.form_field(form.advertiser)}}        
+        label Variable Selection
+        {{form.variable_form(class_='chosen-control')}}
+        {{wtf.form_field(form.addVariable)}}
+        br
+        label Enter trims as shown in final name
+        {{form.trim_correction_form(class_='chosen-control')}}
+        {{wtf.form_field(form.addTrimCorrection)}}
+        br        
+        {{wtf.form_field(form.submitAdvertiserData, class="pull-right btn btn-primary")}}
+        br
+        label Activity Selection
+        br
+        {{form.activity_selection_form(class_='chosen-control')}}
+        br
+        {{wtf.form_field(form.addActivitySelection)}}
+        br
+        {{wtf.form_field(form.submit, class="pull-right btn btn-success")}}
+      meta(id="scroll-data", data="{{scroll}}")
+    .col-md-1
+        
